@@ -1,0 +1,5 @@
+if(EXISTS "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/tests/ftpd_test[1]_tests.cmake")
+  include("/home/scutech/Enviroments/engineering/For FTP/ftpd/build/tests/ftpd_test[1]_tests.cmake")
+else()
+  add_test(ftpd_test_NOT_BUILT ftpd_test_NOT_BUILT)
+endif()

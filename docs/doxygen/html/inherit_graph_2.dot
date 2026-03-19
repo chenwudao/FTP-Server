@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="ftpd::ICommand",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classftpd_1_1ICommand.html",tooltip="FTP命令接口，所有命令实现必须继承此接口"];
+}

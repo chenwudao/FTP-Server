@@ -1,0 +1,295 @@
+\hypertarget{classftpd_1_1FTPServer}{}\doxysection{ftpd\+::F\+T\+P\+Server Class Reference}
+\label{classftpd_1_1FTPServer}\index{ftpd::FTPServer@{ftpd::FTPServer}}
+
+
+F\+T\+P服务器，基于\+A\+CE Reactor事件驱动模型  
+
+
+
+
+{\ttfamily \#include $<$F\+T\+P\+Server.\+h$>$}
+
+
+
+Inheritance diagram for ftpd\+::F\+T\+P\+Server\+:
+% FIG 0
+
+
+Collaboration diagram for ftpd\+::F\+T\+P\+Server\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classftpd_1_1FTPServer_aa866441e85b35971c23e82770f882a8e}{F\+T\+P\+Server}} ()
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classftpd_1_1FTPServer_a0397e026ed82dd915e30b55bfa5dcb05}{$\sim$\+F\+T\+P\+Server}} ()
+\begin{DoxyCompactList}\small\item\em 析构函数，自动清理资源 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classftpd_1_1FTPServer_a42db2cf0b8be92ae2a8feb3133ee80f5}{open}} (int port=21, const std\+::string \&root\+\_\+dir=\char`\"{}.\char`\"{}, const std\+::string \&passwd\+\_\+file=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 初始化服务器 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classftpd_1_1FTPServer_a5981a3fbd8bf1497f226cd7ee3526461}{run}} ()
+\begin{DoxyCompactList}\small\item\em 运行服务器事件循环（阻塞） \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classftpd_1_1FTPServer_a6a1377a3fab9341260525c398c6b9607}{stop}} ()
+\begin{DoxyCompactList}\small\item\em 停止服务器 \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classftpd_1_1FTPServer_abcd473d6303ebd577066aae46c1ff3da}{get\+\_\+root\+\_\+dir}} () const
+\begin{DoxyCompactList}\small\item\em 获取根目录 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classftpd_1_1FTPServer_a3ecff6e9d93226edb3e3440c0c16be61}{authenticate}} (const std\+::string \&username, const std\+::string \&password) const
+\begin{DoxyCompactList}\small\item\em 验证用户密码 \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classftpd_1_1FTPServer_a736c04dc70b83cb4ad4dcd45467ea847}{handle\+\_\+input}} (A\+C\+E\+\_\+\+H\+A\+N\+D\+LE fd=A\+C\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+A\+N\+D\+LE) override
+\begin{DoxyCompactList}\small\item\em Reactor回调：处理新连接请求 \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classftpd_1_1FTPServer_acb773a8a4876a9dd10f78ec9c271efbb}{handle\+\_\+close}} (A\+C\+E\+\_\+\+H\+A\+N\+D\+LE fd, A\+C\+E\+\_\+\+Reactor\+\_\+\+Mask mask) override
+\begin{DoxyCompactList}\small\item\em Reactor回调：处理acceptor关闭 \end{DoxyCompactList}\item 
+virtual A\+C\+E\+\_\+\+H\+A\+N\+D\+LE \mbox{\hyperlink{classftpd_1_1FTPServer_a9df56260bd1046f3ec18ab51d16bae93}{get\+\_\+handle}} () const override
+\begin{DoxyCompactList}\small\item\em 获取事件处理器关联的句柄 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classftpd_1_1FTPServer_a21fb217dca4b435958246ce8d460b11b}{load\+\_\+passwd\+\_\+file}} (const std\+::string \&filepath)
+\begin{DoxyCompactList}\small\item\em 加载用户密码文件 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+A\+C\+E\+\_\+\+S\+O\+C\+K\+\_\+\+Acceptor \mbox{\hyperlink{classftpd_1_1FTPServer_a9bdc74da351e0694167f915255a35e92}{acceptor\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 监听acceptor \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classftpd_1_1FTPServer_a08e32fd5d81f0ebac11dddadb21482f0}{root\+\_\+dir\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 服务器根目录 \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classftpd_1_1FTPServer_a1fb5565a48fbc97f8cf3b64aaefb71b6}{users\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classftpd_1_1FTPConnection}{F\+T\+P\+Connection}} $\ast$ $>$ \mbox{\hyperlink{classftpd_1_1FTPServer_a662297f4b6f2f1bc73415b57178c7a92}{connections\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+F\+T\+P服务器，基于\+A\+CE Reactor事件驱动模型 
+
+职责：
+\begin{DoxyItemize}
+\item 初始化并监听控制连接端口（默认21）
+\item 接受客户端连接请求（handle\+\_\+input回调）
+\item 为每个客户端创建\+F\+T\+P\+Connection对象并注册到\+Reactor
+\item 管理全局配置（根目录、用户密码文件等）
+\item 运行\+Reactor事件循环
+\end{DoxyItemize}
+
+使用方式： 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classftpd_1_1FTPServer_aa866441e85b35971c23e82770f882a8e}{FTPServer}} server;}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (server.open(21, \textcolor{stringliteral}{"/var/ftp"}) == 0) \{}
+\DoxyCodeLine{    server.run();  \textcolor{comment}{// 进入事件循环}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classftpd_1_1FTPServer_aa866441e85b35971c23e82770f882a8e}\label{classftpd_1_1FTPServer_aa866441e85b35971c23e82770f882a8e}} 
+\index{ftpd::FTPServer@{ftpd::FTPServer}!FTPServer@{FTPServer}}
+\index{FTPServer@{FTPServer}!ftpd::FTPServer@{ftpd::FTPServer}}
+\doxysubsubsection{\texorpdfstring{FTPServer()}{FTPServer()}}
+{\footnotesize\ttfamily ftpd\+::\+F\+T\+P\+Server\+::\+F\+T\+P\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+\mbox{\Hypertarget{classftpd_1_1FTPServer_a0397e026ed82dd915e30b55bfa5dcb05}\label{classftpd_1_1FTPServer_a0397e026ed82dd915e30b55bfa5dcb05}} 
+\index{ftpd::FTPServer@{ftpd::FTPServer}!````~FTPServer@{$\sim$FTPServer}}
+\index{````~FTPServer@{$\sim$FTPServer}!ftpd::FTPServer@{ftpd::FTPServer}}
+\doxysubsubsection{\texorpdfstring{$\sim$FTPServer()}{~FTPServer()}}
+{\footnotesize\ttfamily ftpd\+::\+F\+T\+P\+Server\+::$\sim$\+F\+T\+P\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+析构函数，自动清理资源 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classftpd_1_1FTPServer_a3ecff6e9d93226edb3e3440c0c16be61}\label{classftpd_1_1FTPServer_a3ecff6e9d93226edb3e3440c0c16be61}} 
+\index{ftpd::FTPServer@{ftpd::FTPServer}!authenticate@{authenticate}}
+\index{authenticate@{authenticate}!ftpd::FTPServer@{ftpd::FTPServer}}
+\doxysubsubsection{\texorpdfstring{authenticate()}{authenticate()}}
+{\footnotesize\ttfamily bool ftpd\+::\+F\+T\+P\+Server\+::authenticate (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption}) const}
+
+
+
+验证用户密码 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & 用户名 \\
+\hline
+{\em password} & 密码 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+验证通过返回true
+\end{DoxyReturn}
+从加载的密码文件中查找匹配用户名和密码。 如果未配置密码文件，默认拒绝所有用户。 \mbox{\Hypertarget{classftpd_1_1FTPServer_a9df56260bd1046f3ec18ab51d16bae93}\label{classftpd_1_1FTPServer_a9df56260bd1046f3ec18ab51d16bae93}} 
+\index{ftpd::FTPServer@{ftpd::FTPServer}!get\_handle@{get\_handle}}
+\index{get\_handle@{get\_handle}!ftpd::FTPServer@{ftpd::FTPServer}}
+\doxysubsubsection{\texorpdfstring{get\_handle()}{get\_handle()}}
+{\footnotesize\ttfamily A\+C\+E\+\_\+\+H\+A\+N\+D\+LE ftpd\+::\+F\+T\+P\+Server\+::get\+\_\+handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+获取事件处理器关联的句柄 
+
+\begin{DoxyReturn}{Returns}
+acceptor的文件描述符 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classftpd_1_1FTPServer_abcd473d6303ebd577066aae46c1ff3da}\label{classftpd_1_1FTPServer_abcd473d6303ebd577066aae46c1ff3da}} 
+\index{ftpd::FTPServer@{ftpd::FTPServer}!get\_root\_dir@{get\_root\_dir}}
+\index{get\_root\_dir@{get\_root\_dir}!ftpd::FTPServer@{ftpd::FTPServer}}
+\doxysubsubsection{\texorpdfstring{get\_root\_dir()}{get\_root\_dir()}}
+{\footnotesize\ttfamily const std\+::string\& ftpd\+::\+F\+T\+P\+Server\+::get\+\_\+root\+\_\+dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取根目录 
+
+\mbox{\Hypertarget{classftpd_1_1FTPServer_acb773a8a4876a9dd10f78ec9c271efbb}\label{classftpd_1_1FTPServer_acb773a8a4876a9dd10f78ec9c271efbb}} 
+\index{ftpd::FTPServer@{ftpd::FTPServer}!handle\_close@{handle\_close}}
+\index{handle\_close@{handle\_close}!ftpd::FTPServer@{ftpd::FTPServer}}
+\doxysubsubsection{\texorpdfstring{handle\_close()}{handle\_close()}}
+{\footnotesize\ttfamily int ftpd\+::\+F\+T\+P\+Server\+::handle\+\_\+close (\begin{DoxyParamCaption}\item[{A\+C\+E\+\_\+\+H\+A\+N\+D\+LE}]{fd,  }\item[{A\+C\+E\+\_\+\+Reactor\+\_\+\+Mask}]{mask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reactor回调：处理acceptor关闭 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & 文件描述符 \\
+\hline
+{\em mask} & 事件掩码 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+返回-\/1通知\+Reactor移除此handler 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classftpd_1_1FTPServer_a736c04dc70b83cb4ad4dcd45467ea847}\label{classftpd_1_1FTPServer_a736c04dc70b83cb4ad4dcd45467ea847}} 
+\index{ftpd::FTPServer@{ftpd::FTPServer}!handle\_input@{handle\_input}}
+\index{handle\_input@{handle\_input}!ftpd::FTPServer@{ftpd::FTPServer}}
+\doxysubsubsection{\texorpdfstring{handle\_input()}{handle\_input()}}
+{\footnotesize\ttfamily int ftpd\+::\+F\+T\+P\+Server\+::handle\+\_\+input (\begin{DoxyParamCaption}\item[{A\+C\+E\+\_\+\+H\+A\+N\+D\+LE}]{fd = {\ttfamily ACE\+\_\+INVALID\+\_\+HANDLE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reactor回调：处理新连接请求 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & 文件描述符（acceptor的socket） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功返回0，失败返回-\/1
+\end{DoxyReturn}
+调用acceptor\+\_\+.\+accept()接受新连接，创建\+F\+T\+P\+Connection对象， 调用其open()方法初始化并注册到\+Reactor。 \mbox{\Hypertarget{classftpd_1_1FTPServer_a21fb217dca4b435958246ce8d460b11b}\label{classftpd_1_1FTPServer_a21fb217dca4b435958246ce8d460b11b}} 
+\index{ftpd::FTPServer@{ftpd::FTPServer}!load\_passwd\_file@{load\_passwd\_file}}
+\index{load\_passwd\_file@{load\_passwd\_file}!ftpd::FTPServer@{ftpd::FTPServer}}
+\doxysubsubsection{\texorpdfstring{load\_passwd\_file()}{load\_passwd\_file()}}
+{\footnotesize\ttfamily int ftpd\+::\+F\+T\+P\+Server\+::load\+\_\+passwd\+\_\+file (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+加载用户密码文件 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & 密码文件路径 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功返回0，失败返回-\/1
+\end{DoxyReturn}
+文件格式：每行\char`\"{}username\+:password\char`\"{}（明文）。 支持匿名用户：\char`\"{}anonymous\+:any\char`\"{} 或 \char`\"{}ftp\+:any\char`\"{}。 \mbox{\Hypertarget{classftpd_1_1FTPServer_a42db2cf0b8be92ae2a8feb3133ee80f5}\label{classftpd_1_1FTPServer_a42db2cf0b8be92ae2a8feb3133ee80f5}} 
+\index{ftpd::FTPServer@{ftpd::FTPServer}!open@{open}}
+\index{open@{open}!ftpd::FTPServer@{ftpd::FTPServer}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily int ftpd\+::\+F\+T\+P\+Server\+::open (\begin{DoxyParamCaption}\item[{int}]{port = {\ttfamily 21},  }\item[{const std\+::string \&}]{root\+\_\+dir = {\ttfamily \char`\"{}.\char`\"{}},  }\item[{const std\+::string \&}]{passwd\+\_\+file = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+初始化服务器 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & 监听端口（默认21） \\
+\hline
+{\em root\+\_\+dir} & 根目录（默认当前目录） \\
+\hline
+{\em passwd\+\_\+file} & 用户密码文件路径（可选） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功返回0，失败返回-\/1
+\end{DoxyReturn}
+执行步骤：
+\begin{DoxyEnumerate}
+\item 创建\+A\+C\+E\+\_\+\+S\+O\+C\+K\+\_\+\+Acceptor并绑定端口
+\item 加载用户密码文件（如果提供）
+\item 注册到\+Reactor监听\+A\+C\+C\+E\+P\+T事件 
+\end{DoxyEnumerate}\mbox{\Hypertarget{classftpd_1_1FTPServer_a5981a3fbd8bf1497f226cd7ee3526461}\label{classftpd_1_1FTPServer_a5981a3fbd8bf1497f226cd7ee3526461}} 
+\index{ftpd::FTPServer@{ftpd::FTPServer}!run@{run}}
+\index{run@{run}!ftpd::FTPServer@{ftpd::FTPServer}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int ftpd\+::\+F\+T\+P\+Server\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+运行服务器事件循环（阻塞） 
+
+\begin{DoxyReturn}{Returns}
+正常退出返回0
+\end{DoxyReturn}
+调用\+A\+C\+E\+\_\+\+Reactor\+::instance()-\/$>$run\+\_\+reactor\+\_\+event\+\_\+loop() 进入事件循环，处理所有注册的handler。 按\+Ctrl+\+C或调用stop()可退出循环。 \mbox{\Hypertarget{classftpd_1_1FTPServer_a6a1377a3fab9341260525c398c6b9607}\label{classftpd_1_1FTPServer_a6a1377a3fab9341260525c398c6b9607}} 
+\index{ftpd::FTPServer@{ftpd::FTPServer}!stop@{stop}}
+\index{stop@{stop}!ftpd::FTPServer@{ftpd::FTPServer}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void ftpd\+::\+F\+T\+P\+Server\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+停止服务器 
+
+结束\+Reactor事件循环，关闭acceptor， 断开所有客户端连接。 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classftpd_1_1FTPServer_a9bdc74da351e0694167f915255a35e92}\label{classftpd_1_1FTPServer_a9bdc74da351e0694167f915255a35e92}} 
+\index{ftpd::FTPServer@{ftpd::FTPServer}!acceptor\_@{acceptor\_}}
+\index{acceptor\_@{acceptor\_}!ftpd::FTPServer@{ftpd::FTPServer}}
+\doxysubsubsection{\texorpdfstring{acceptor\_}{acceptor\_}}
+{\footnotesize\ttfamily A\+C\+E\+\_\+\+S\+O\+C\+K\+\_\+\+Acceptor ftpd\+::\+F\+T\+P\+Server\+::acceptor\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+监听acceptor 
+
+\mbox{\Hypertarget{classftpd_1_1FTPServer_a662297f4b6f2f1bc73415b57178c7a92}\label{classftpd_1_1FTPServer_a662297f4b6f2f1bc73415b57178c7a92}} 
+\index{ftpd::FTPServer@{ftpd::FTPServer}!connections\_@{connections\_}}
+\index{connections\_@{connections\_}!ftpd::FTPServer@{ftpd::FTPServer}}
+\doxysubsubsection{\texorpdfstring{connections\_}{connections\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classftpd_1_1FTPConnection}{F\+T\+P\+Connection}}$\ast$$>$ ftpd\+::\+F\+T\+P\+Server\+::connections\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classftpd_1_1FTPServer_a08e32fd5d81f0ebac11dddadb21482f0}\label{classftpd_1_1FTPServer_a08e32fd5d81f0ebac11dddadb21482f0}} 
+\index{ftpd::FTPServer@{ftpd::FTPServer}!root\_dir\_@{root\_dir\_}}
+\index{root\_dir\_@{root\_dir\_}!ftpd::FTPServer@{ftpd::FTPServer}}
+\doxysubsubsection{\texorpdfstring{root\_dir\_}{root\_dir\_}}
+{\footnotesize\ttfamily std\+::string ftpd\+::\+F\+T\+P\+Server\+::root\+\_\+dir\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+服务器根目录 
+
+\mbox{\Hypertarget{classftpd_1_1FTPServer_a1fb5565a48fbc97f8cf3b64aaefb71b6}\label{classftpd_1_1FTPServer_a1fb5565a48fbc97f8cf3b64aaefb71b6}} 
+\index{ftpd::FTPServer@{ftpd::FTPServer}!users\_@{users\_}}
+\index{users\_@{users\_}!ftpd::FTPServer@{ftpd::FTPServer}}
+\doxysubsubsection{\texorpdfstring{users\_}{users\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::string$>$ ftpd\+::\+F\+T\+P\+Server\+::users\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/scutech/\+Enviroments/engineering/\+For F\+T\+P/ftpd/include/ftpd/\mbox{\hyperlink{FTPServer_8h}{F\+T\+P\+Server.\+h}}\item 
+/home/scutech/\+Enviroments/engineering/\+For F\+T\+P/ftpd/src/\mbox{\hyperlink{FTPServer_8cpp}{F\+T\+P\+Server.\+cpp}}\end{DoxyCompactItemize}

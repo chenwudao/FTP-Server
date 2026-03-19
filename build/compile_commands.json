@@ -1,0 +1,87 @@
+[
+{
+  "directory": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/src",
+  "command": "/usr/bin/g++   -I\"/home/scutech/Enviroments/engineering/For FTP/ftpd/include\"  -g   -std=gnu++11 -o CMakeFiles/ftpd.dir/main.cpp.o -c \"/home/scutech/Enviroments/engineering/For FTP/ftpd/src/main.cpp\"",
+  "file": "/home/scutech/Enviroments/engineering/For FTP/ftpd/src/main.cpp"
+},
+{
+  "directory": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/src",
+  "command": "/usr/bin/g++   -I\"/home/scutech/Enviroments/engineering/For FTP/ftpd/include\"  -g   -std=gnu++11 -o CMakeFiles/ftpd_lib.dir/DataConnection.cpp.o -c \"/home/scutech/Enviroments/engineering/For FTP/ftpd/src/DataConnection.cpp\"",
+  "file": "/home/scutech/Enviroments/engineering/For FTP/ftpd/src/DataConnection.cpp"
+},
+{
+  "directory": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/src",
+  "command": "/usr/bin/g++   -I\"/home/scutech/Enviroments/engineering/For FTP/ftpd/include\"  -g   -std=gnu++11 -o CMakeFiles/ftpd_lib.dir/FTPConnection.cpp.o -c \"/home/scutech/Enviroments/engineering/For FTP/ftpd/src/FTPConnection.cpp\"",
+  "file": "/home/scutech/Enviroments/engineering/For FTP/ftpd/src/FTPConnection.cpp"
+},
+{
+  "directory": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/src",
+  "command": "/usr/bin/g++   -I\"/home/scutech/Enviroments/engineering/For FTP/ftpd/include\"  -g   -std=gnu++11 -o CMakeFiles/ftpd_lib.dir/FTPServer.cpp.o -c \"/home/scutech/Enviroments/engineering/For FTP/ftpd/src/FTPServer.cpp\"",
+  "file": "/home/scutech/Enviroments/engineering/For FTP/ftpd/src/FTPServer.cpp"
+},
+{
+  "directory": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/src",
+  "command": "/usr/bin/g++   -I\"/home/scutech/Enviroments/engineering/For FTP/ftpd/include\"  -g   -std=gnu++11 -o CMakeFiles/ftpd_lib.dir/FileSystem.cpp.o -c \"/home/scutech/Enviroments/engineering/For FTP/ftpd/src/FileSystem.cpp\"",
+  "file": "/home/scutech/Enviroments/engineering/For FTP/ftpd/src/FileSystem.cpp"
+},
+{
+  "directory": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/src",
+  "command": "/usr/bin/g++   -I\"/home/scutech/Enviroments/engineering/For FTP/ftpd/include\"  -g   -std=gnu++11 -o CMakeFiles/ftpd_lib.dir/main.cpp.o -c \"/home/scutech/Enviroments/engineering/For FTP/ftpd/src/main.cpp\"",
+  "file": "/home/scutech/Enviroments/engineering/For FTP/ftpd/src/main.cpp"
+},
+{
+  "directory": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/src",
+  "command": "/usr/bin/g++   -I\"/home/scutech/Enviroments/engineering/For FTP/ftpd/include\"  -g   -std=gnu++11 -o CMakeFiles/ftpd_lib.dir/commands/AuthCommands.cpp.o -c \"/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/AuthCommands.cpp\"",
+  "file": "/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/AuthCommands.cpp"
+},
+{
+  "directory": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/src",
+  "command": "/usr/bin/g++   -I\"/home/scutech/Enviroments/engineering/For FTP/ftpd/include\"  -g   -std=gnu++11 -o CMakeFiles/ftpd_lib.dir/commands/DirectoryCommands.cpp.o -c \"/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/DirectoryCommands.cpp\"",
+  "file": "/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/DirectoryCommands.cpp"
+},
+{
+  "directory": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/src",
+  "command": "/usr/bin/g++   -I\"/home/scutech/Enviroments/engineering/For FTP/ftpd/include\"  -g   -std=gnu++11 -o CMakeFiles/ftpd_lib.dir/commands/FileCommands.cpp.o -c \"/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/FileCommands.cpp\"",
+  "file": "/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/FileCommands.cpp"
+},
+{
+  "directory": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/src",
+  "command": "/usr/bin/g++   -I\"/home/scutech/Enviroments/engineering/For FTP/ftpd/include\"  -g   -std=gnu++11 -o CMakeFiles/ftpd_lib.dir/commands/MiscCommands.cpp.o -c \"/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/MiscCommands.cpp\"",
+  "file": "/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/MiscCommands.cpp"
+},
+{
+  "directory": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/src",
+  "command": "/usr/bin/g++   -I\"/home/scutech/Enviroments/engineering/For FTP/ftpd/include\"  -g   -std=gnu++11 -o CMakeFiles/ftpd_lib.dir/commands/TransferCommands.cpp.o -c \"/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/TransferCommands.cpp\"",
+  "file": "/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/TransferCommands.cpp"
+},
+{
+  "directory": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/tests",
+  "command": "/usr/bin/g++   -I\"/home/scutech/Enviroments/engineering/For FTP/ftpd/include\" -isystem \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googletest/include\" -isystem \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googletest\" -isystem \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googlemock/include\" -isystem \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googlemock\"  -g   -std=gnu++11 -o CMakeFiles/ftpd_test.dir/test_main.cpp.o -c \"/home/scutech/Enviroments/engineering/For FTP/ftpd/tests/test_main.cpp\"",
+  "file": "/home/scutech/Enviroments/engineering/For FTP/ftpd/tests/test_main.cpp"
+},
+{
+  "directory": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/tests",
+  "command": "/usr/bin/g++   -I\"/home/scutech/Enviroments/engineering/For FTP/ftpd/include\" -isystem \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googletest/include\" -isystem \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googletest\" -isystem \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googlemock/include\" -isystem \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googlemock\"  -g   -std=gnu++11 -o CMakeFiles/ftpd_test.dir/CommandTests.cpp.o -c \"/home/scutech/Enviroments/engineering/For FTP/ftpd/tests/CommandTests.cpp\"",
+  "file": "/home/scutech/Enviroments/engineering/For FTP/ftpd/tests/CommandTests.cpp"
+},
+{
+  "directory": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/g++   -isystem \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googlemock/include\" -isystem \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googlemock\" -isystem \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googletest/include\" -isystem \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googletest\"  -g   -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++11 -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googlemock/src/gmock_main.cc\"",
+  "file": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/g++   -I\"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googlemock/include\" -I\"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googlemock\" -isystem \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googletest/include\" -isystem \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googletest\"  -g   -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++11 -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googlemock/src/gmock-all.cc\"",
+  "file": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/g++   -isystem \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googletest/include\" -isystem \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googletest\"  -g   -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++11 -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googletest/src/gtest_main.cc\"",
+  "file": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googletest/src/gtest_main.cc"
+},
+{
+  "directory": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/g++   -I\"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googletest/include\" -I\"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googletest\"  -g   -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++11 -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c \"/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googletest/src/gtest-all.cc\"",
+  "file": "/home/scutech/Enviroments/engineering/For FTP/ftpd/build/_deps/googletest-src/googletest/src/gtest-all.cc"
+}
+]

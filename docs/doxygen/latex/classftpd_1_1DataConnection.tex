@@ -1,0 +1,301 @@
+\hypertarget{classftpd_1_1DataConnection}{}\doxysection{ftpd\+::Data\+Connection Class Reference}
+\label{classftpd_1_1DataConnection}\index{ftpd::DataConnection@{ftpd::DataConnection}}
+
+
+处理\+F\+T\+P被动模式（\+P\+A\+S\+V）数据传输  
+
+
+
+
+{\ttfamily \#include $<$Data\+Connection.\+h$>$}
+
+
+
+Inheritance diagram for ftpd\+::Data\+Connection\+:
+% FIG 0
+
+
+Collaboration diagram for ftpd\+::Data\+Connection\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classftpd_1_1DataConnection_ab56e39553aaa237d49fdeb9871d0cffe}{Data\+Connection}} ()
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classftpd_1_1DataConnection_aec0ab4fa7b6561e5081594f73ced8d38}{$\sim$\+Data\+Connection}} ()
+\begin{DoxyCompactList}\small\item\em 析构函数，自动清理资源 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classftpd_1_1DataConnection_adeb202ff9f0da0ebb4c3cd93fa9af3f1}{pasv\+\_\+listen}} (const A\+C\+E\+\_\+\+I\+N\+E\+T\+\_\+\+Addr \&local\+\_\+addr)
+\begin{DoxyCompactList}\small\item\em 创建被动模式监听器 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classftpd_1_1DataConnection_ad49679b6b8fa3a0fdd07218965359486}{get\+\_\+local\+\_\+addr}} (A\+C\+E\+\_\+\+I\+N\+E\+T\+\_\+\+Addr \&addr) const
+\begin{DoxyCompactList}\small\item\em 获取监听地址（用于构造\+P\+A\+S\+V响应） \end{DoxyCompactList}\item 
+ssize\+\_\+t \mbox{\hyperlink{classftpd_1_1DataConnection_a2576dfcb1f518d0dd45ee426525c5e03}{send\+\_\+data}} (const char $\ast$buf, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em 发送数据到客户端 \end{DoxyCompactList}\item 
+ssize\+\_\+t \mbox{\hyperlink{classftpd_1_1DataConnection_a862c806ff637bc0023ed1b36bf2234c2}{recv\+\_\+data}} (char $\ast$buf, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em 从客户端接收数据 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classftpd_1_1DataConnection_ac1323d3aa46053835d3515bf5fa38cec}{close}} ()
+\begin{DoxyCompactList}\small\item\em 关闭数据连接 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classftpd_1_1DataConnection_ad8fb3b9b541e6fa436a7f5a22df638c0}{is\+\_\+connected}} () const
+\begin{DoxyCompactList}\small\item\em 检查是否已建立数据连接 \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classftpd_1_1DataConnection_a1f943728150304642f705047568e28bb}{handle\+\_\+input}} (A\+C\+E\+\_\+\+H\+A\+N\+D\+LE fd=A\+C\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+A\+N\+D\+LE) override
+\begin{DoxyCompactList}\small\item\em Reactor回调：处理新连接或数据到达 \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classftpd_1_1DataConnection_a7a8fd74f5d1c63665317af8f2c0c217a}{handle\+\_\+close}} (A\+C\+E\+\_\+\+H\+A\+N\+D\+LE fd, A\+C\+E\+\_\+\+Reactor\+\_\+\+Mask mask) override
+\begin{DoxyCompactList}\small\item\em Reactor回调：处理连接关闭 \end{DoxyCompactList}\item 
+virtual A\+C\+E\+\_\+\+H\+A\+N\+D\+LE \mbox{\hyperlink{classftpd_1_1DataConnection_a1e521a78f652d1b246fd3d8e8480ea85}{get\+\_\+handle}} () const override
+\begin{DoxyCompactList}\small\item\em 获取事件处理器关联的句柄 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+A\+C\+E\+\_\+\+S\+O\+C\+K\+\_\+\+Acceptor \mbox{\hyperlink{classftpd_1_1DataConnection_a1b41b8d46efe4b51e681adfe994b29cf}{acceptor\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 监听acceptor \end{DoxyCompactList}\item 
+A\+C\+E\+\_\+\+S\+O\+C\+K\+\_\+\+Stream \mbox{\hyperlink{classftpd_1_1DataConnection_ac11789e780adcf925eb1b7545fc8fed1}{data\+\_\+stream\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 数据传输socket \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classftpd_1_1DataConnection_a07b68c41b7fdb50724038fe3e61cfe08}{is\+\_\+listening\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 是否正在监听 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classftpd_1_1DataConnection_ab804213dc527584374d4cdbb6cb3a311}{is\+\_\+connected\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 是否已建立数据连接 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+处理\+F\+T\+P被动模式（\+P\+A\+S\+V）数据传输 
+
+负责：
+\begin{DoxyItemize}
+\item 创建随机端口监听器并注册到\+Reactor
+\item 接受客户端数据连接
+\item 发送数据（\+L\+I\+S\+T、\+R\+E\+T\+R）
+\item 接收数据（\+S\+T\+O\+R）
+\item 传输完成后关闭连接
+\end{DoxyItemize}
+
+使用场景：
+\begin{DoxyEnumerate}
+\item 收到\+P\+A\+S\+V命令时创建\+Data\+Connection对象并调用pasv\+\_\+listen()
+\item 返回\char`\"{}227 Entering Passive Mode (h1,h2,h3,h4,p1,p2)\char`\"{}
+\item 客户端连接后，handle\+\_\+input被触发，accept数据连接
+\item 后续\+L\+I\+S\+T/\+R\+E\+T\+R/\+S\+T\+O\+R命令通过send\+\_\+data/recv\+\_\+data传输数据
+\item 传输完成调用close() 
+\end{DoxyEnumerate}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classftpd_1_1DataConnection_ab56e39553aaa237d49fdeb9871d0cffe}\label{classftpd_1_1DataConnection_ab56e39553aaa237d49fdeb9871d0cffe}} 
+\index{ftpd::DataConnection@{ftpd::DataConnection}!DataConnection@{DataConnection}}
+\index{DataConnection@{DataConnection}!ftpd::DataConnection@{ftpd::DataConnection}}
+\doxysubsubsection{\texorpdfstring{DataConnection()}{DataConnection()}}
+{\footnotesize\ttfamily ftpd\+::\+Data\+Connection\+::\+Data\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+\mbox{\Hypertarget{classftpd_1_1DataConnection_aec0ab4fa7b6561e5081594f73ced8d38}\label{classftpd_1_1DataConnection_aec0ab4fa7b6561e5081594f73ced8d38}} 
+\index{ftpd::DataConnection@{ftpd::DataConnection}!````~DataConnection@{$\sim$DataConnection}}
+\index{````~DataConnection@{$\sim$DataConnection}!ftpd::DataConnection@{ftpd::DataConnection}}
+\doxysubsubsection{\texorpdfstring{$\sim$DataConnection()}{~DataConnection()}}
+{\footnotesize\ttfamily ftpd\+::\+Data\+Connection\+::$\sim$\+Data\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+析构函数，自动清理资源 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classftpd_1_1DataConnection_ac1323d3aa46053835d3515bf5fa38cec}\label{classftpd_1_1DataConnection_ac1323d3aa46053835d3515bf5fa38cec}} 
+\index{ftpd::DataConnection@{ftpd::DataConnection}!close@{close}}
+\index{close@{close}!ftpd::DataConnection@{ftpd::DataConnection}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void ftpd\+::\+Data\+Connection\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+关闭数据连接 
+
+\mbox{\Hypertarget{classftpd_1_1DataConnection_a1e521a78f652d1b246fd3d8e8480ea85}\label{classftpd_1_1DataConnection_a1e521a78f652d1b246fd3d8e8480ea85}} 
+\index{ftpd::DataConnection@{ftpd::DataConnection}!get\_handle@{get\_handle}}
+\index{get\_handle@{get\_handle}!ftpd::DataConnection@{ftpd::DataConnection}}
+\doxysubsubsection{\texorpdfstring{get\_handle()}{get\_handle()}}
+{\footnotesize\ttfamily A\+C\+E\+\_\+\+H\+A\+N\+D\+LE ftpd\+::\+Data\+Connection\+::get\+\_\+handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+获取事件处理器关联的句柄 
+
+\begin{DoxyReturn}{Returns}
+文件描述符 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classftpd_1_1DataConnection_ad49679b6b8fa3a0fdd07218965359486}\label{classftpd_1_1DataConnection_ad49679b6b8fa3a0fdd07218965359486}} 
+\index{ftpd::DataConnection@{ftpd::DataConnection}!get\_local\_addr@{get\_local\_addr}}
+\index{get\_local\_addr@{get\_local\_addr}!ftpd::DataConnection@{ftpd::DataConnection}}
+\doxysubsubsection{\texorpdfstring{get\_local\_addr()}{get\_local\_addr()}}
+{\footnotesize\ttfamily int ftpd\+::\+Data\+Connection\+::get\+\_\+local\+\_\+addr (\begin{DoxyParamCaption}\item[{A\+C\+E\+\_\+\+I\+N\+E\+T\+\_\+\+Addr \&}]{addr }\end{DoxyParamCaption}) const}
+
+
+
+获取监听地址（用于构造\+P\+A\+S\+V响应） 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & 输出参数，存储监听地址和端口 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功返回0，失败返回-\/1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classftpd_1_1DataConnection_a7a8fd74f5d1c63665317af8f2c0c217a}\label{classftpd_1_1DataConnection_a7a8fd74f5d1c63665317af8f2c0c217a}} 
+\index{ftpd::DataConnection@{ftpd::DataConnection}!handle\_close@{handle\_close}}
+\index{handle\_close@{handle\_close}!ftpd::DataConnection@{ftpd::DataConnection}}
+\doxysubsubsection{\texorpdfstring{handle\_close()}{handle\_close()}}
+{\footnotesize\ttfamily int ftpd\+::\+Data\+Connection\+::handle\+\_\+close (\begin{DoxyParamCaption}\item[{A\+C\+E\+\_\+\+H\+A\+N\+D\+LE}]{fd,  }\item[{A\+C\+E\+\_\+\+Reactor\+\_\+\+Mask}]{mask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reactor回调：处理连接关闭 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & 文件描述符 \\
+\hline
+{\em mask} & 事件掩码 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+返回0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classftpd_1_1DataConnection_a1f943728150304642f705047568e28bb}\label{classftpd_1_1DataConnection_a1f943728150304642f705047568e28bb}} 
+\index{ftpd::DataConnection@{ftpd::DataConnection}!handle\_input@{handle\_input}}
+\index{handle\_input@{handle\_input}!ftpd::DataConnection@{ftpd::DataConnection}}
+\doxysubsubsection{\texorpdfstring{handle\_input()}{handle\_input()}}
+{\footnotesize\ttfamily int ftpd\+::\+Data\+Connection\+::handle\+\_\+input (\begin{DoxyParamCaption}\item[{A\+C\+E\+\_\+\+H\+A\+N\+D\+LE}]{fd = {\ttfamily ACE\+\_\+INVALID\+\_\+HANDLE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reactor回调：处理新连接或数据到达 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & 文件描述符 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功返回0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classftpd_1_1DataConnection_ad8fb3b9b541e6fa436a7f5a22df638c0}\label{classftpd_1_1DataConnection_ad8fb3b9b541e6fa436a7f5a22df638c0}} 
+\index{ftpd::DataConnection@{ftpd::DataConnection}!is\_connected@{is\_connected}}
+\index{is\_connected@{is\_connected}!ftpd::DataConnection@{ftpd::DataConnection}}
+\doxysubsubsection{\texorpdfstring{is\_connected()}{is\_connected()}}
+{\footnotesize\ttfamily bool ftpd\+::\+Data\+Connection\+::is\+\_\+connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+检查是否已建立数据连接 
+
+\begin{DoxyReturn}{Returns}
+已连接返回true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classftpd_1_1DataConnection_adeb202ff9f0da0ebb4c3cd93fa9af3f1}\label{classftpd_1_1DataConnection_adeb202ff9f0da0ebb4c3cd93fa9af3f1}} 
+\index{ftpd::DataConnection@{ftpd::DataConnection}!pasv\_listen@{pasv\_listen}}
+\index{pasv\_listen@{pasv\_listen}!ftpd::DataConnection@{ftpd::DataConnection}}
+\doxysubsubsection{\texorpdfstring{pasv\_listen()}{pasv\_listen()}}
+{\footnotesize\ttfamily int ftpd\+::\+Data\+Connection\+::pasv\+\_\+listen (\begin{DoxyParamCaption}\item[{const A\+C\+E\+\_\+\+I\+N\+E\+T\+\_\+\+Addr \&}]{local\+\_\+addr }\end{DoxyParamCaption})}
+
+
+
+创建被动模式监听器 
+
+
+\begin{DoxyParams}{Parameters}
+{\em local\+\_\+addr} & 本地地址（用于绑定，端口为0表示随机） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功返回监听端口号，失败返回-\/1
+\end{DoxyReturn}
+创建\+A\+C\+E\+\_\+\+S\+O\+C\+K\+\_\+\+Acceptor并绑定随机端口（$>$1023）， 注册到\+Reactor等待客户端连接。 \mbox{\Hypertarget{classftpd_1_1DataConnection_a862c806ff637bc0023ed1b36bf2234c2}\label{classftpd_1_1DataConnection_a862c806ff637bc0023ed1b36bf2234c2}} 
+\index{ftpd::DataConnection@{ftpd::DataConnection}!recv\_data@{recv\_data}}
+\index{recv\_data@{recv\_data}!ftpd::DataConnection@{ftpd::DataConnection}}
+\doxysubsubsection{\texorpdfstring{recv\_data()}{recv\_data()}}
+{\footnotesize\ttfamily ssize\+\_\+t ftpd\+::\+Data\+Connection\+::recv\+\_\+data (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+从客户端接收数据 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & 接收缓冲区 \\
+\hline
+{\em len} & 缓冲区大小 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功接收的字节数，0表示连接关闭，-\/1表示错误 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classftpd_1_1DataConnection_a2576dfcb1f518d0dd45ee426525c5e03}\label{classftpd_1_1DataConnection_a2576dfcb1f518d0dd45ee426525c5e03}} 
+\index{ftpd::DataConnection@{ftpd::DataConnection}!send\_data@{send\_data}}
+\index{send\_data@{send\_data}!ftpd::DataConnection@{ftpd::DataConnection}}
+\doxysubsubsection{\texorpdfstring{send\_data()}{send\_data()}}
+{\footnotesize\ttfamily ssize\+\_\+t ftpd\+::\+Data\+Connection\+::send\+\_\+data (\begin{DoxyParamCaption}\item[{const char $\ast$}]{buf,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+发送数据到客户端 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & 数据缓冲区 \\
+\hline
+{\em len} & 数据长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功发送的字节数，失败返回-\/1 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classftpd_1_1DataConnection_a1b41b8d46efe4b51e681adfe994b29cf}\label{classftpd_1_1DataConnection_a1b41b8d46efe4b51e681adfe994b29cf}} 
+\index{ftpd::DataConnection@{ftpd::DataConnection}!acceptor\_@{acceptor\_}}
+\index{acceptor\_@{acceptor\_}!ftpd::DataConnection@{ftpd::DataConnection}}
+\doxysubsubsection{\texorpdfstring{acceptor\_}{acceptor\_}}
+{\footnotesize\ttfamily A\+C\+E\+\_\+\+S\+O\+C\+K\+\_\+\+Acceptor ftpd\+::\+Data\+Connection\+::acceptor\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+监听acceptor 
+
+\mbox{\Hypertarget{classftpd_1_1DataConnection_ac11789e780adcf925eb1b7545fc8fed1}\label{classftpd_1_1DataConnection_ac11789e780adcf925eb1b7545fc8fed1}} 
+\index{ftpd::DataConnection@{ftpd::DataConnection}!data\_stream\_@{data\_stream\_}}
+\index{data\_stream\_@{data\_stream\_}!ftpd::DataConnection@{ftpd::DataConnection}}
+\doxysubsubsection{\texorpdfstring{data\_stream\_}{data\_stream\_}}
+{\footnotesize\ttfamily A\+C\+E\+\_\+\+S\+O\+C\+K\+\_\+\+Stream ftpd\+::\+Data\+Connection\+::data\+\_\+stream\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+数据传输socket 
+
+\mbox{\Hypertarget{classftpd_1_1DataConnection_ab804213dc527584374d4cdbb6cb3a311}\label{classftpd_1_1DataConnection_ab804213dc527584374d4cdbb6cb3a311}} 
+\index{ftpd::DataConnection@{ftpd::DataConnection}!is\_connected\_@{is\_connected\_}}
+\index{is\_connected\_@{is\_connected\_}!ftpd::DataConnection@{ftpd::DataConnection}}
+\doxysubsubsection{\texorpdfstring{is\_connected\_}{is\_connected\_}}
+{\footnotesize\ttfamily bool ftpd\+::\+Data\+Connection\+::is\+\_\+connected\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+是否已建立数据连接 
+
+\mbox{\Hypertarget{classftpd_1_1DataConnection_a07b68c41b7fdb50724038fe3e61cfe08}\label{classftpd_1_1DataConnection_a07b68c41b7fdb50724038fe3e61cfe08}} 
+\index{ftpd::DataConnection@{ftpd::DataConnection}!is\_listening\_@{is\_listening\_}}
+\index{is\_listening\_@{is\_listening\_}!ftpd::DataConnection@{ftpd::DataConnection}}
+\doxysubsubsection{\texorpdfstring{is\_listening\_}{is\_listening\_}}
+{\footnotesize\ttfamily bool ftpd\+::\+Data\+Connection\+::is\+\_\+listening\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+是否正在监听 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/scutech/\+Enviroments/engineering/\+For F\+T\+P/ftpd/include/ftpd/\mbox{\hyperlink{DataConnection_8h}{Data\+Connection.\+h}}\item 
+/home/scutech/\+Enviroments/engineering/\+For F\+T\+P/ftpd/src/\mbox{\hyperlink{DataConnection_8cpp}{Data\+Connection.\+cpp}}\end{DoxyCompactItemize}

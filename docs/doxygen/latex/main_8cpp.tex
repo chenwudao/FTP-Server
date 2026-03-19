@@ -1,0 +1,91 @@
+\hypertarget{main_8cpp}{}\doxysection{/home/scutech/\+Enviroments/engineering/\+For F\+T\+P/ftpd/src/main.cpp File Reference}
+\label{main_8cpp}\index{/home/scutech/Enviroments/engineering/For FTP/ftpd/src/main.cpp@{/home/scutech/Enviroments/engineering/For FTP/ftpd/src/main.cpp}}
+
+
+F\+T\+P服务器主程序入口  
+
+
+{\ttfamily \#include \char`\"{}ftpd/\+F\+T\+P\+Server.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$ace/\+Log\+\_\+\+Msg.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$getopt.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_af675374954cdabdf63d036fe3c12d348}{signal\+\_\+handler}} (int signum)
+\begin{DoxyCompactList}\small\item\em 信号处理函数（\+Ctrl+\+C优雅退出） \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_aa35730e2ee087e2e891f4e2805f69c58}{print\+\_\+usage}} (const char $\ast$prog\+\_\+name)
+\begin{DoxyCompactList}\small\item\em 打印使用帮助 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em 主函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classftpd_1_1FTPServer}{F\+T\+P\+Server}} $\ast$ \mbox{\hyperlink{main_8cpp_aa859f8d5796f4ba478c9b2ad1818ad03}{g\+\_\+server}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+F\+T\+P服务器主程序入口 
+
+\begin{DoxyAuthor}{Author}
+ftpd team 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2026-\/03-\/03 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+主函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & 参数个数 \\
+\hline
+{\em argv} & 参数数组 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功返回0，失败返回非0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_aa35730e2ee087e2e891f4e2805f69c58}\label{main_8cpp_aa35730e2ee087e2e891f4e2805f69c58}} 
+\index{main.cpp@{main.cpp}!print\_usage@{print\_usage}}
+\index{print\_usage@{print\_usage}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_usage()}{print\_usage()}}
+{\footnotesize\ttfamily void print\+\_\+usage (\begin{DoxyParamCaption}\item[{const char $\ast$}]{prog\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+打印使用帮助 
+
+\mbox{\Hypertarget{main_8cpp_af675374954cdabdf63d036fe3c12d348}\label{main_8cpp_af675374954cdabdf63d036fe3c12d348}} 
+\index{main.cpp@{main.cpp}!signal\_handler@{signal\_handler}}
+\index{signal\_handler@{signal\_handler}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{signal\_handler()}{signal\_handler()}}
+{\footnotesize\ttfamily void signal\+\_\+handler (\begin{DoxyParamCaption}\item[{int}]{signum }\end{DoxyParamCaption})}
+
+
+
+信号处理函数（\+Ctrl+\+C优雅退出） 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_aa859f8d5796f4ba478c9b2ad1818ad03}\label{main_8cpp_aa859f8d5796f4ba478c9b2ad1818ad03}} 
+\index{main.cpp@{main.cpp}!g\_server@{g\_server}}
+\index{g\_server@{g\_server}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_server}{g\_server}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classftpd_1_1FTPServer}{F\+T\+P\+Server}}$\ast$ g\+\_\+server = nullptr\hspace{0.3cm}{\ttfamily [static]}}
+

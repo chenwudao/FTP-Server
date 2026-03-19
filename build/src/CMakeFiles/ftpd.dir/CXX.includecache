@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/ftpd/FTPServer.h
+ace/Event_Handler.h
+-
+ace/SOCK_Acceptor.h
+-
+ace/INET_Addr.h
+-
+ace/Reactor.h
+-
+string
+-
+vector
+-
+memory
+-
+unordered_map
+-
+
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/main.cpp
+ftpd/FTPServer.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/ftpd/FTPServer.h
+ace/Log_Msg.h
+-
+iostream
+-
+getopt.h
+-
+signal.h
+-
+

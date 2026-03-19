@@ -1,0 +1,230 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/ftpd/DataConnection.h
+Types.h
+../include/ftpd/Types.h
+ace/Event_Handler.h
+-
+ace/SOCK_Acceptor.h
+-
+ace/SOCK_Stream.h
+-
+ace/INET_Addr.h
+-
+memory
+-
+
+../include/ftpd/FTPConnection.h
+Types.h
+../include/ftpd/Types.h
+DataConnection.h
+../include/ftpd/DataConnection.h
+ICommand.h
+../include/ftpd/ICommand.h
+FileSystem.h
+../include/ftpd/FileSystem.h
+ace/Event_Handler.h
+-
+ace/SOCK_Stream.h
+-
+ace/INET_Addr.h
+-
+string
+-
+memory
+-
+unordered_map
+-
+
+../include/ftpd/FTPServer.h
+ace/Event_Handler.h
+-
+ace/SOCK_Acceptor.h
+-
+ace/INET_Addr.h
+-
+ace/Reactor.h
+-
+string
+-
+vector
+-
+memory
+-
+unordered_map
+-
+
+../include/ftpd/FileSystem.h
+string
+-
+vector
+-
+
+../include/ftpd/ICommand.h
+string
+-
+memory
+-
+
+../include/ftpd/Types.h
+string
+-
+
+../include/ftpd/commands/AuthCommands.h
+ftpd/ICommand.h
+../include/ftpd/commands/ftpd/ICommand.h
+
+../include/ftpd/commands/DirectoryCommands.h
+ftpd/ICommand.h
+../include/ftpd/commands/ftpd/ICommand.h
+
+../include/ftpd/commands/FileCommands.h
+ftpd/ICommand.h
+../include/ftpd/commands/ftpd/ICommand.h
+
+../include/ftpd/commands/MiscCommands.h
+ftpd/ICommand.h
+../include/ftpd/commands/ftpd/ICommand.h
+
+../include/ftpd/commands/TransferCommands.h
+ftpd/ICommand.h
+../include/ftpd/commands/ftpd/ICommand.h
+
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/DataConnection.cpp
+ftpd/DataConnection.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/ftpd/DataConnection.h
+ace/Log_Msg.h
+-
+ace/Reactor.h
+-
+
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/FTPConnection.cpp
+ftpd/FTPConnection.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/ftpd/FTPConnection.h
+ftpd/FTPServer.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/ftpd/FTPServer.h
+ftpd/commands/AuthCommands.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/ftpd/commands/AuthCommands.h
+ftpd/commands/DirectoryCommands.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/ftpd/commands/DirectoryCommands.h
+ftpd/commands/FileCommands.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/ftpd/commands/FileCommands.h
+ftpd/commands/TransferCommands.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/ftpd/commands/TransferCommands.h
+ftpd/commands/MiscCommands.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/ftpd/commands/MiscCommands.h
+ace/Log_Msg.h
+-
+ace/Reactor.h
+-
+sstream
+-
+
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/FTPServer.cpp
+ftpd/FTPServer.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/ftpd/FTPServer.h
+ftpd/FTPConnection.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/ftpd/FTPConnection.h
+ace/Log_Msg.h
+-
+ace/Reactor.h
+-
+fstream
+-
+sstream
+-
+
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/FileSystem.cpp
+ftpd/FileSystem.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/ftpd/FileSystem.h
+sys/stat.h
+-
+sys/types.h
+-
+dirent.h
+-
+unistd.h
+-
+pwd.h
+-
+grp.h
+-
+ctime
+-
+cstring
+-
+sstream
+-
+algorithm
+-
+
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/AuthCommands.cpp
+ftpd/commands/AuthCommands.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/ftpd/commands/AuthCommands.h
+ftpd/FTPConnection.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/ftpd/FTPConnection.h
+ftpd/FTPServer.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/ftpd/FTPServer.h
+
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/DirectoryCommands.cpp
+ftpd/commands/DirectoryCommands.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/ftpd/commands/DirectoryCommands.h
+ftpd/FTPConnection.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/ftpd/FTPConnection.h
+ftpd/FileSystem.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/ftpd/FileSystem.h
+sstream
+-
+
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/FileCommands.cpp
+ftpd/commands/FileCommands.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/ftpd/commands/FileCommands.h
+ftpd/FTPConnection.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/ftpd/FTPConnection.h
+ftpd/FileSystem.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/ftpd/FileSystem.h
+sstream
+-
+
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/MiscCommands.cpp
+ftpd/commands/MiscCommands.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/ftpd/commands/MiscCommands.h
+ftpd/FTPConnection.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/ftpd/FTPConnection.h
+
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/TransferCommands.cpp
+ftpd/commands/TransferCommands.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/ftpd/commands/TransferCommands.h
+ftpd/FTPConnection.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/ftpd/FTPConnection.h
+ftpd/DataConnection.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/ftpd/DataConnection.h
+ftpd/FileSystem.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/commands/ftpd/FileSystem.h
+ace/INET_Addr.h
+-
+ace/Log_Msg.h
+-
+fstream
+-
+sstream
+-
+
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/main.cpp
+ftpd/FTPServer.h
+/home/scutech/Enviroments/engineering/For FTP/ftpd/src/ftpd/FTPServer.h
+ace/Log_Msg.h
+-
+iostream
+-
+getopt.h
+-
+signal.h
+-
+

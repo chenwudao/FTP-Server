@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/ftpd.dir/main.cpp.o  -o ../bin/ftpd  libftpd_lib.a /usr/lib/libACE.so -lpthread 

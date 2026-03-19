@@ -1,0 +1,43 @@
+\hypertarget{DataConnection_8h}{}\doxysection{/home/scutech/\+Enviroments/engineering/\+For F\+T\+P/ftpd/include/ftpd/\+Data\+Connection.h File Reference}
+\label{DataConnection_8h}\index{/home/scutech/Enviroments/engineering/For FTP/ftpd/include/ftpd/DataConnection.h@{/home/scutech/Enviroments/engineering/For FTP/ftpd/include/ftpd/DataConnection.h}}
+
+
+F\+T\+P被动模式数据连接类  
+
+
+{\ttfamily \#include \char`\"{}Types.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$ace/\+Event\+\_\+\+Handler.\+h$>$}\newline
+{\ttfamily \#include $<$ace/\+S\+O\+C\+K\+\_\+\+Acceptor.\+h$>$}\newline
+{\ttfamily \#include $<$ace/\+S\+O\+C\+K\+\_\+\+Stream.\+h$>$}\newline
+{\ttfamily \#include $<$ace/\+I\+N\+E\+T\+\_\+\+Addr.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+Include dependency graph for Data\+Connection.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classftpd_1_1DataConnection}{ftpd\+::\+Data\+Connection}}
+\begin{DoxyCompactList}\small\item\em 处理\+F\+T\+P被动模式（\+P\+A\+S\+V）数据传输 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceftpd}{ftpd}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceftpd_a5336f10c09c3c227e85dd9f79fc86131}{ftpd\+::\+Data\+Connection\+Ptr}} = std\+::unique\+\_\+ptr$<$ Data\+Connection $>$
+\begin{DoxyCompactList}\small\item\em 数据连接智能指针类型 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+F\+T\+P被动模式数据连接类 
+
+\begin{DoxyAuthor}{Author}
+ftpd team 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2026-\/03-\/03 
+\end{DoxyDate}

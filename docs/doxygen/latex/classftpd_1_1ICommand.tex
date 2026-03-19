@@ -1,0 +1,66 @@
+\hypertarget{classftpd_1_1ICommand}{}\doxysection{ftpd\+::I\+Command Class Reference}
+\label{classftpd_1_1ICommand}\index{ftpd::ICommand@{ftpd::ICommand}}
+
+
+F\+T\+P命令接口，所有命令实现必须继承此接口  
+
+
+
+
+{\ttfamily \#include $<$I\+Command.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classftpd_1_1ICommand_ad91c630d44b0c1a9dccb858960e10832}{$\sim$\+I\+Command}} ()=default
+\begin{DoxyCompactList}\small\item\em 虚析构函数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classftpd_1_1ICommand_a28d8ed85b40c924ecefd390b0aaefa64}{execute}} (\mbox{\hyperlink{classftpd_1_1FTPConnection}{F\+T\+P\+Connection}} $\ast$conn, const std\+::string \&arg)=0
+\begin{DoxyCompactList}\small\item\em 执行\+F\+T\+P命令 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+F\+T\+P命令接口，所有命令实现必须继承此接口 
+
+提供统一的命令执行接口，支持多态分发。 每个具体命令（如\+U\+S\+E\+R、\+P\+A\+S\+S、\+L\+I\+S\+T等）实现execute方法。 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classftpd_1_1ICommand_ad91c630d44b0c1a9dccb858960e10832}\label{classftpd_1_1ICommand_ad91c630d44b0c1a9dccb858960e10832}} 
+\index{ftpd::ICommand@{ftpd::ICommand}!````~ICommand@{$\sim$ICommand}}
+\index{````~ICommand@{$\sim$ICommand}!ftpd::ICommand@{ftpd::ICommand}}
+\doxysubsubsection{\texorpdfstring{$\sim$ICommand()}{~ICommand()}}
+{\footnotesize\ttfamily virtual ftpd\+::\+I\+Command\+::$\sim$\+I\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+虚析构函数 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classftpd_1_1ICommand_a28d8ed85b40c924ecefd390b0aaefa64}\label{classftpd_1_1ICommand_a28d8ed85b40c924ecefd390b0aaefa64}} 
+\index{ftpd::ICommand@{ftpd::ICommand}!execute@{execute}}
+\index{execute@{execute}!ftpd::ICommand@{ftpd::ICommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily virtual void ftpd\+::\+I\+Command\+::execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classftpd_1_1FTPConnection}{F\+T\+P\+Connection}} $\ast$}]{conn,  }\item[{const std\+::string \&}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+执行\+F\+T\+P命令 
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & 客户端连接对象指针 \\
+\hline
+{\em arg} & 命令参数（可能为空）\\
+\hline
+\end{DoxyParams}
+命令执行过程中应：
+\begin{DoxyItemize}
+\item 检查连接状态（如认证状态）
+\item 执行具体操作（文件系统、数据传输等）
+\item 调用conn-\/$>$send\+\_\+response()发送响应 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/scutech/\+Enviroments/engineering/\+For F\+T\+P/ftpd/include/ftpd/\mbox{\hyperlink{ICommand_8h}{I\+Command.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/ftpd_test.dir/test_main.cpp.o CMakeFiles/ftpd_test.dir/CommandTests.cpp.o  -o ../bin/ftpd_test  ../src/libftpd_lib.a ../lib/libgtest.a ../lib/libgtest_main.a ../lib/libgmock.a /usr/lib/libACE.so -lpthread ../lib/libgtest.a -lpthread 

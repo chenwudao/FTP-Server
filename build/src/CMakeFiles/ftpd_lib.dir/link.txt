@@ -1,0 +1,2 @@
+/usr/bin/ar qc libftpd_lib.a  CMakeFiles/ftpd_lib.dir/DataConnection.cpp.o CMakeFiles/ftpd_lib.dir/FTPConnection.cpp.o CMakeFiles/ftpd_lib.dir/FTPServer.cpp.o CMakeFiles/ftpd_lib.dir/FileSystem.cpp.o CMakeFiles/ftpd_lib.dir/main.cpp.o CMakeFiles/ftpd_lib.dir/commands/AuthCommands.cpp.o CMakeFiles/ftpd_lib.dir/commands/DirectoryCommands.cpp.o CMakeFiles/ftpd_lib.dir/commands/FileCommands.cpp.o CMakeFiles/ftpd_lib.dir/commands/MiscCommands.cpp.o CMakeFiles/ftpd_lib.dir/commands/TransferCommands.cpp.o
+/usr/bin/ranlib libftpd_lib.a
